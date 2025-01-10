@@ -19,65 +19,61 @@ app.get('/', (req, res) => {
         <!DOCTYPE html>
         <html lang="pt-BR">
         <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Clientes</title>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    background-color: #fff8e1; /* Amarelo claro */
-                    color: #333;
-                    text-align: center;
-                }
-                header {
-                    background-color: #ffab00; /* Amarelo forte */
-                    padding: 20px;
-                    position: relative;
-                }
-                h1 {
-                    color: white; /* Texto branco para contraste */
-                    margin: 0;
-                }
-                button {
-                    background-color: #ffb300; /* Amarelo médio */
-                    color: white;
-                    border: none;
-                    padding: 10px 20px;
-                    font-size: 16px;
-                    cursor: pointer;
-                    border-radius: 5px;
-                    position: absolute; /* Posicionamento absoluto */
-                    right: 20px; /* 20px da direita */
-                    top: 50%; /* Alinhamento vertical */
-                    transform: translateY(-50%); /* Centralizar verticalmente */
-                }
-                button:hover {
-                    background-color: #ffa000; /* Amarelo mais escuro ao passar o mouse */
-                }
-                table {
-                    width: 80%;
-                    margin: 0 auto;
-                    border-collapse: collapse;
-                    margin-top: 20px;
-                    display: none; /* Ocultar tabela inicialmente */
-                }
-                th, td {
-                    border: 1px solid #ffb300; /* Bordas amarelas */
-                    padding: 10px;
-                }
-                th {
-                    background-color: #ffca28; /* Amarelo mais claro para o cabeçalho */
-                    color: black; /* Texto preto para contraste */
-                }
-                tr:nth-child(even) {
-                    background-color: #fffde7; /* Amarelo muito claro para linhas pares */
-                }
+        <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8e1; 
+    color: #333;
+    text-align: center;
+}
+header {
+    background-color: #ffab00;
+    padding: 20px;
+    position: relative;
+}
+h1 {
+    color: white; 
+    margin: 0;
+}
+button {
+    background-color: #ffb300; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute; 
+    right: 20px; 
+    transform: translateY(-50%); 
+}
+button:hover {
+    background-color: #ffa000;
+}
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    display: none; 
+}
+th, td {
+    border: 1px solid #ffb300;
+    padding: 10px;
+}
+th {
+    background-color: #ffca28; 
+    color: black; 
+}
+tr:nth-child(even) {
+    background-color: #fffde7; 
+}
             </style>
         </head>
         <body>
             <header>
                 <h1>Clientes</h1>
-                <button id="show-clientes">Mostrar Clientes</button>
+                <button id="show-clientes">Pesquisar Clientes</button>
             </header>
             <table id="clientes-table">
                 <thead>
